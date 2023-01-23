@@ -14,7 +14,7 @@ const ORIGIN_LIST = [
     'https://safe.neobase.one',
     'https://analytics.neobase.one',
     'https://analytics.canto.neobase.one',
-    'https://analytics-staging.neobase.one',
+    'https://analytics-staging.canto.neobase.one',
     'https://splits-staging.neobase.one',
     'https://safe-staging.neobase.one',
     'http://localhost:3000'
@@ -42,6 +42,7 @@ app.use('/api', createProxyMiddleware({
     headers: {
         'x-cg-pro-api-key': process.env.API_KEY_DASHBOARD || "",
     },
+    logLevel: 'debug'
 }));
 
 // Start the Proxy
